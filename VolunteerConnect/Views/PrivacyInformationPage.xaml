@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VolunteerConnect.Views.PrivacyInformationPage"
+    Title="Privacy Information">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label 
+                Text="Privacy Information"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="What information is collected?"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="We collect only the information required to manage your registration for an opportunity: preferred name, contact details (email or phone), availability, and any optional notes you choose to provide." />
+
+            <Label 
+                Text="Why is it collected?"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="This information allows us to match you with the selected opportunity, contact you if needed, and understand your availability." />
+
+            <Label 
+                Text="How is your information used?"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="Your information is used solely for managing your registration and communicating with you about the opportunity you selected." />
+
+            <Label 
+                Text="Where is your information stored?"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="This prototype stores all registration data locally on your device. No information is sent to external servers or shared with third parties." />
+
+            <Label 
+                Text="How can you correct your information?"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="If you need to correct your details, simply return to the registration page and submit a new registration with the updated information." />
+
+            <Label 
+                Text="How can you delete your information?"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="You may delete your registration data at any time by using the 'Delete Registration' option (if available) or by clearing the app's local storage." />
+
+            <Label 
+                Text="Local Storage Notice"
+                FontSize="20"
+                FontAttributes="Bold" />
+            <Label 
+                Text="This is a prototype application. All data is stored only on your device and does not leave it." />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

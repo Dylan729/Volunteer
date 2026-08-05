@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VolunteerConnect.Views.MyRegistrationsPage"
+    Title="My Registrations">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label
+            Text="Your Volunteer Registrations"
+            FontSize="26"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <!-- CollectionView -->
+        <CollectionView
+            x:Name="RegistrationsCollection"
+            SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Stroke="LightGray"
+                        StrokeThickness="1"
+                        Padding="15"
+                        Margin="0,10"
+                        StrokeShape="RoundRectangle 12">
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <Label
+                                Text="{Binding PreferredName}"
+                                FontSize="20"
+                                FontAttributes="Bold" />
+
+                            <Label
+                                Text="{Binding Contact}"
+                                FontSize="14"
+                                TextColor="Gray" />
+
+                            <Label
+                                Text="{Binding Availability}"
+                                FontSize="14" />
+
+                            <Label
+                                Text="{Binding Note}"
+                                FontSize="14"
+                                LineBreakMode="WordWrap" />
+
+                            <Label
+                                Text="{Binding RegisteredOn, StringFormat='Registered on {0:dd MMM yyyy}'}"
+                                FontSize="14"
+                                TextColor="Gray" />
+
+                            <HorizontalStackLayout Spacing="10">
+                                <Button
+                                    Text="View Details"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.ViewDetailsCommand}"
+                                    CommandParameter="{Binding OpportunityId}"
+                                    BackgroundColor="#0078D4"
+                                    TextColor="White" />
+
+                                <Button
+                                    Text="Edit"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditCommand}"
+                                    CommandParameter="{Binding OpportunityId}"
+                                    BackgroundColor="#FFA500"
+                                    TextColor="White" />
+
+                                <Button
+                                    Text="Delete"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteCommand}"
+                                    CommandParameter="{Binding OpportunityId}"
+                                    BackgroundColor="#D83B01"
+                                    TextColor="White" />
+                            </HorizontalStackLayout>
+
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VolunteerConnect.Views.RegistrationPage"
+    Title="Register Interest">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Opportunity Title -->
+            <Label
+                x:Name="OpportunityTitleLabel"
+                FontSize="26"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- Preferred Name -->
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Preferred Name" FontAttributes="Bold" />
+                <Entry x:Name="NameEntry" Placeholder="Your name..." />
+            </VerticalStackLayout>
+
+            <!-- Contact -->
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Email or Phone" FontAttributes="Bold" />
+                <Entry x:Name="ContactEntry" Placeholder="Email or phone number..." />
+            </VerticalStackLayout>
+
+            <!-- Availability -->
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Availability" FontAttributes="Bold" />
+                <Entry x:Name="AvailabilityEntry" Placeholder="When are you available?" />
+            </VerticalStackLayout>
+
+            <!-- Optional Note -->
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Optional Note" FontAttributes="Bold" />
+                <Editor x:Name="NoteEditor" Placeholder="Anything else we should know?" />
+            </VerticalStackLayout>
+
+            <!-- Privacy Consent -->
+            <Button
+                    Text="Privacy Information"
+                    x:Name="PrivacyInfoButton"
+                    BackgroundColor="#0078D4"
+                    TextColor="White" />
+            
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox x:Name="ConsentCheckBox" />
+                <Label Text="I agree to the privacy policy." />
+            </HorizontalStackLayout>
+
+            <!-- Submit Button -->
+            <Button
+                Text="Submit Registration"
+                x:Name="SubmitButton"
+                BackgroundColor="#0078D4"
+                TextColor="White"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                CornerRadius="8" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
