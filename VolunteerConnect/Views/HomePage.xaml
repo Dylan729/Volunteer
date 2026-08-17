@@ -3,54 +3,74 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="VolunteerConnect.Views.HomePage"
-    Title="Home">
+    Title="Home"
+    BackgroundColor="#F5F7FA">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="20"
-            Spacing="25">
+            Padding="24"
+            Spacing="28">
 
             <!-- Application Name -->
             <Label
+                
                 Text="Volunteer Connect"
-                FontSize="32"
+                FontSize="34"
                 FontAttributes="Bold"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                TextColor="#1A1A1A"
+                Margin="0,0,0,4" />
 
             <!-- Short Explanation -->
             <Label
                 Text="Find meaningful volunteer opportunities and make an impact in your community."
                 FontSize="18"
                 HorizontalOptions="Center"
-                HorizontalTextAlignment="Center" />
+                HorizontalTextAlignment="Center"
+                TextColor="#555555"
+                Margin="0,0,0,12" />
 
             <!-- Featured Opportunity -->
             <Border
                 Stroke="LightGray"
                 StrokeThickness="1"
-                Background="Transparent"
-                Padding="15"
-                StrokeShape="RoundRectangle 12">
+                BackgroundColor="White"
+                Padding="18"
+                StrokeShape="RoundRectangle 12"
+                Margin="0,0,0,12">
 
                 <VerticalStackLayout Spacing="10">
                     <Label
                         Text="Featured Opportunity"
                         FontSize="22"
-                        FontAttributes="Bold" />
+                        FontAttributes="Bold"
+                        TextColor="#333333" />
 
                     <Label
                         x:Name="FeaturedOpportunityTitle"
-                        Text="Loading..."
-                        FontSize="18" />
+                        Text="Beach Cleanup"
+                        FontSize="18"
+                        TextColor="#444444" />
 
                     <Label
                         x:Name="FeaturedOpportunityDescription"
-                        Text="Loading..."
-                        FontSize="14" />
+                        Text="Help clean up the beach"
+                        FontSize="14"
+                        TextColor="#666666" />
+
+                    <Image
+                        x:Name="FeaturedOpportunityImage"
+                        Source="{Binding ImageUrl}"
+                        HeightRequest="120"
+                        Aspect="AspectFill" />
 
                     <Button
                         Text="View Details"
-                        x:Name="FeaturedOpportunityButton" />
+                        x:Name="FeaturedOpportunityButton"
+                        BackgroundColor="#0078D4"
+                        TextColor="White"
+                        HeightRequest="44"
+                        Margin="0,8,0,0" />
                 </VerticalStackLayout>
             </Border>
 
@@ -58,39 +78,44 @@
             <Border
                 Stroke="LightGray"
                 StrokeThickness="1"
-                Background="Transparent"
-                Padding="15"
-                StrokeShape="RoundRectangle 12">
+                BackgroundColor="White"
+                Padding="18"
+                StrokeShape="RoundRectangle 12"
+                Margin="0,0,0,16">
 
                 <VerticalStackLayout Spacing="10">
                     <Label
                         Text="Available Opportunities"
                         FontSize="22"
-                        FontAttributes="Bold" />
+                        FontAttributes="Bold"
+                        TextColor="#333333" />
 
                     <Label
                         x:Name="OpportunityCountLabel"
-                        Text="Loading..."
-                        FontSize="18" />
+                        Text="2 Available Opportunities"
+                        FontSize="20"
+                        TextColor="#444444" />
                 </VerticalStackLayout>
             </Border>
 
             <!-- Navigation Buttons -->
-            <VerticalStackLayout Spacing="15">
+            <VerticalStackLayout Spacing="14">
                 <Button
                     Text="Browse Opportunities"
                     x:Name="BrowseOpportunitiesButton"
-                    
                     BackgroundColor="#0078D4"
-                    TextColor="White" />
+                    TextColor="White"
+                    HeightRequest="50"
+                    FontSize="18"
+                    Margin="0,0,0,4" />
 
                 <Button
                     Text="My Registrations"
                     x:Name="MyRegistrationsButton"
                     BackgroundColor="#0078D4"
-                    TextColor="White" />
-
-
+                    TextColor="White"
+                    HeightRequest="50"
+                    FontSize="18" />
             </VerticalStackLayout>
 
         </VerticalStackLayout>

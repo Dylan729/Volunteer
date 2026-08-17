@@ -23,6 +23,7 @@ public partial class HomePage : ContentPage
 
         FeaturedOpportunityTitle.Text = featured.Title;
         FeaturedOpportunityDescription.Text = featured.ShortDescription;
+        FeaturedOpportunityImage.Source = featured.ImageUrl;
 
         FeaturedOpportunityButton.Clicked += async (s, e) =>
         {

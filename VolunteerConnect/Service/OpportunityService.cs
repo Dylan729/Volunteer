@@ -18,7 +18,7 @@ public class OpportunityService
             Location = "Mission Bay",
             ShortDescription = "Help clean up the beach and protect marine life.",
             AvailablePlaces = 12,
-            ImageUrl = "beach_cleanup.png"
+            ImageUrl = "beach_cleanup.jpg"
         },
         new Opportunity
         {
@@ -30,8 +30,45 @@ public class OpportunityService
             Location = "Central Auckland",
             ShortDescription = "Assist with sorting and distributing food donations.",
             AvailablePlaces = 0,
-            ImageUrl = "food_bank.png"
+            ImageUrl = "food_bank.jpg"
+        },
+        new Opportunity
+        {
+            Id = 3,
+            Title = "Community Garden Planting",
+            Category = "Environment",
+            Date = DateTime.Today.AddDays(7),
+            Time = "1:00 PM",
+            Location = "Grey Lynn Community Garden",
+            ShortDescription = "Join the team in planting vegetables and maintaining the community garden.",
+            AvailablePlaces = 8,
+            ImageUrl = "community_garden.jpg"
+        },
+        new Opportunity
+        {
+            Id = 4,
+            Title = "Elderly Support Visit",
+            Category = "Community",
+            Date = DateTime.Today.AddDays(10),
+            Time = "2:00 PM",
+            Location = "Mt Eden Retirement Village",
+            ShortDescription = "Spend time with elderly residents, offering companionship and conversation.",
+            AvailablePlaces = 5,
+            ImageUrl = "elderly_support.jpg"
+        },
+        new Opportunity
+        {
+            Id = 5,
+            Title = "Animal Shelter Care",
+            Category = "Animals",
+            Date = DateTime.Today.AddDays(14),
+            Time = "11:00 AM",
+            Location = "Auckland Animal Rescue",
+            ShortDescription = "Help feed, clean, and care for rescued animals waiting for adoption.",
+            AvailablePlaces = 3,
+            ImageUrl = "animal_shelter.jpg"
         }
+
     };
 
     private readonly DatabaseService _database = new();

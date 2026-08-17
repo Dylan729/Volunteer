@@ -52,6 +52,9 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
+	<RuntimeIdentifiers>android-arm64;android-arm</RuntimeIdentifiers>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->

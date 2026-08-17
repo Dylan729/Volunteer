@@ -18,7 +18,7 @@
             <!-- Preferred Name -->
             <VerticalStackLayout Spacing="5">
                 <Label Text="Preferred Name" FontAttributes="Bold" />
-                <Entry x:Name="NameEntry" Placeholder="Your name..." />
+                <Entry x:Name="NameEntry" Placeholder="Your preferred name..." />
             </VerticalStackLayout>
 
             <!-- Contact -->
